@@ -1,8 +1,15 @@
 import React from 'react'
+import Cocktaillist from '../components/Cocktaillist'
+import Searchforum from '../components/Searchforum'
+
+
 
 function Home() {
   return (
-    <div>Home</div>
+    <main>
+    <Cocktaillist/>
+    <Searchforum/>
+    </main>
   )
 }
 
