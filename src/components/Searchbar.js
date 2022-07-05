@@ -8,6 +8,10 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import {useGlobalContext} from '../Context'
+
+
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -52,6 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function SearchAppBar() {
+  const {setSearchTerm}= useGlobalContext()
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -78,6 +83,7 @@ export default function SearchAppBar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
+              onChange={(e)=>{setSearchTerm(e.target.value)}}
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
             />
