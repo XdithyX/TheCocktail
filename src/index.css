@@ -63,6 +63,17 @@ img {
   width: 100%;
   display: block;
 }
+/*
+====== 
+Admin
+======
+*/
+.form{
+  background-color: whitesmoke;
+ margin-top: 19%;
+ display: flex;
+ justify-content: center;
+}
 
 /* 
 ====== 
@@ -380,6 +391,8 @@ Cocktail
 .loader:after {
   left: 1.5em;
 }
+
+
 @-webkit-keyframes load1 {
   0%,
   80%,

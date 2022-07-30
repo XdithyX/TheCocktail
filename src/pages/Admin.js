@@ -8,10 +8,15 @@ function Admin() {
   name === errorMessages.name && (
     <div className="error">{errorMessages.message}</div>
   );
+
+  const handleSubmit = (event) => {
+    // Prevent page reload
+    event.preventDefault();
+  };
   return (
     
         <div className="form">
-          <form>
+          <form onSubmit={handleSubmit} >
             <div className="input-container">
               <label>Username </label>
               <input type="text" name="uname" required />
