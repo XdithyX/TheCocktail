@@ -1,8 +1,14 @@
 import React from 'react'
 import {useState} from 'react'
+import axios from 'axios'
+
 
 
 function Admin() {
+    const [data,setData] = useState({
+        username: "",
+        password: ""
+    })
     const [errorMessages, setErrorMessages] = useState({});
     const renderErrorMessage = (name) =>
   name === errorMessages.name && (
@@ -12,19 +18,28 @@ function Admin() {
   const handleSubmit = (event) => {
     // Prevent page reload
     event.preventDefault();
+    console.log(...data)
+    
   };
+  const handle=(e)=>{
+
+    var newdata={...data}
+    newdata[e.target.id]=e.target.value;
+    setData(newdata)
+    console.log(newdata)
+  }
   return (
     
         <div className="form">
           <form onSubmit={handleSubmit} >
             <div className="input-container">
               <label>Username </label>
-              <input type="text" name="uname" required />
+              <input onChange={(e)=>handle(e)} id="username" value={data.username} type="text" name="uname" required />
               {renderErrorMessage("uname")}
             </div>
             <div className="input-container">
               <label>Password </label>
-              <input type="password" name="pass" required />
+              <input onChange={(e)=>handle(e)} id="password" value={data.password} type="password" name="pass" required />
               {renderErrorMessage("pass")}
             </div>
             <div className="button-container">
