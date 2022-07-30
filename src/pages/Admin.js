@@ -18,7 +18,15 @@ function Admin() {
   const handleSubmit = (event) => {
     // Prevent page reload
     event.preventDefault();
-    console.log(...data)
+    
+    axios.post('http://localhost:5000/admin/validate',
+    {
+    username: data.username,
+    password: data.password
+    }
+    ).then(res => {
+        console.log(res.data)
+      })
     
   };
   const handle=(e)=>{
