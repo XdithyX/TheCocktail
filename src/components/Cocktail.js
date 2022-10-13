@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Link } from 'react-router-dom'
-
+import Aos from 'aos'
 function Cocktail({image , name, id , info, glass}) {
+  useEffect(()=>{
+    Aos.init({duration:1100})
+  },[])
   return (
     <article className='cocktail'>
     <div className='img-container'>
