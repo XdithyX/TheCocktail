@@ -213,6 +213,7 @@ Cocktails List
 }
 .section-title {
   font-size: 2rem;
+  color: #ffff;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
   text-align: center;

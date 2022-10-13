@@ -1,9 +1,11 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import logo from '../logo.svg'
+import Star from './Star/Star'
 function Navbar() {
   return (
-    <nav className='navbar'>
+    <Star>
+      <nav className='navbar' style={{backgroundColor: 'rgba(99,51,104,.37)'}}>
      <div className="nav-center">
      <Link to= "/">
        <img src={logo} alt="cocktail db logo" className="logo"></img>
@@ -21,6 +23,8 @@ function Navbar() {
      </div>
 
     </nav>
+    </Star>
+    
   )
 }
 
