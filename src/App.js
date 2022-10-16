@@ -6,12 +6,13 @@ import Error from "./pages/Error";
 import Singlecocktail from "./pages/Singlecocktail";
 import Home from "./pages/Home";
 import Admin from "./pages/Admin";
-
+import './App.css'
 
 
 function App() {
   return (
-   <Router>
+    <div className="App">
+        <Router>
      <Navbar/>
      <Routes>
         <Route path='/' element={<Home />} />
@@ -23,6 +24,8 @@ function App() {
      
      
    </Router>
+    </div>
+   
   );
 }
 
