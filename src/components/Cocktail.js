@@ -1,14 +1,10 @@
 import React, { useEffect } from 'react'
 import {Link } from 'react-router-dom'
-import Aos from 'aos'
 import Star from './Star/Star'
 function Cocktail({image , name, id , info, glass}) {
-  useEffect(()=>{
-    Aos.init({duration:1100})
-  },[])
   return (
     <Star>
-      <div className="main__cards_container" data-aos="fade-up">
+      <div className="main__cards_container"  >
         <article className='cocktail'>
     <div className='img-container'>
     

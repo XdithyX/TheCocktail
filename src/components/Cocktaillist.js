@@ -3,11 +3,10 @@ import Loading from './Loading'
 import Cocktail from './Cocktail'
 import {useGlobalContext} from '../Context'
 import Aos from 'aos'
-
 function Cocktaillist() {
-  useEffect(()=>{
+ useEffect(()=>{
     Aos.init({duration:1100})
-  },[])
+ },[])
 
   const {loading,cocktails}= useGlobalContext()
  console.log(cocktails)
@@ -21,7 +20,7 @@ if(cocktails.length<1)
 
 return(
   <section className='section'>
-  <h2 className='section-title' data-aos="fade-up">Cocktails</h2>
+  <h2 className='section-title'data-aos="fade-in">Cocktails</h2>
   <div className='cocktails-center'>
   {cocktails.map((item)=>{
    return <Cocktail key={item.id} {...item} />

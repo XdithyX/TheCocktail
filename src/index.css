@@ -156,6 +156,7 @@ Navbar
 .nav-links {
   display: flex;
   align-items: center;
+  color: #ffff;
 }
 .nav-links a {
   text-transform: capitalize;
@@ -260,6 +261,9 @@ Cocktail
 }
 .cocktail-footer {
   padding: 1.5rem;
+  color: #fff;
+  background: #222;
+  backdrop-filter: blur(10px);
 }
 .cocktail-footer h3,
 .cocktail-footer h4,
